@@ -70,7 +70,7 @@ int main()
     }
     else
     {
-        printf("No,he/she may have not coronavirus.");
+        printf("Don't have Coronavirus.");
     }
 
     return 0;
