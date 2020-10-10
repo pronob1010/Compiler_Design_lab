@@ -3,7 +3,6 @@ int main()
 {
     int array[4],i,k,j,temp;
 
-
     for(i=0; i<3; i++)
     {
         scanf("%d", &array[i]);
