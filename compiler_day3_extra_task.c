@@ -12,8 +12,13 @@ int main()
     f = 0;
     int st = 0;
 
+
     for(i = 0; i<len; i++)
     {
+        if((s[i]>='A' && s[i]<='Z') || (s[i]>='a' && s[i]<='z'))
+        {
+            st = 1;
+        }
         if(s[i] =='.')
         {
             f = 1;
@@ -24,25 +29,30 @@ int main()
             fc++;
         }
     }
-
-    if(f==0)
+    printf("Data Type is : ");
+    if (st==1)
     {
-        printf("Integer");
+        printf("character ");
     }
-    else if(fc>0 && fc<=6)
+    else
     {
-        printf("Float");
+        if(f==0)
+        {
+            printf("Integer");
+        }
+        else if(fc>0 && fc<=6)
+        {
+            printf("Float");
+        }
+        else if(fc>6 && fc<=15)
+        {
+            printf("Double");
+        }
+        else if(fc>15 && fc<=19)
+        {
+            printf("Long Double");
+        }
     }
-    else if(fc>6 && fc<=15)
-    {
-        printf("Double");
-    }
-    else if(fc>15 && fc<=19)
-    {
-        printf("Long Double");
-    }
-    
-
     return 0;
 }
 
